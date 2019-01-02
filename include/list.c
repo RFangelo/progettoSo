@@ -1,17 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "util.h"
-
-typedef struct struct_node{
-	char *name;
-	struct struct_node* next;
-}node;/*struttura che ha come membri un puntatore a stringa ed un puntatore al nodo successivo*/
-
-typedef struct struct_node *list;/*puntatore a node*/
-
-void list_init(list *i){
-	*i = NULL;
-}/*Inizializza una lista a null*/
+#include "util.c"
 
 void push(list *i, char *name){
 	list t = (list)(malloc(sizeof(node)));

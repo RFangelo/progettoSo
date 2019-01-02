@@ -1,10 +1,12 @@
 #include <string.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include "util.h"
 
 char * salloc(char* string){
 	char* a = (char *)malloc((sizeof(char)*(strlen(string) + 1)));
 	if(a == NULL){
-	perror("Fatal error in malloc...\n");
+	printf("Fatal error in malloc...\n");
 	exit(0);
 	}
 	strcpy(a, string);
